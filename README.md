@@ -13,6 +13,27 @@ The [`ev_sales.ipynb`](./ev_sales.ipynb) notebook:
 - engineers calendar, rolling-sales, growth, and categorical features;
 - trains and compares Linear Regression, Random Forest, and XGBoost regressors using an 80/20 random train/test split.
 
+## Visualizations
+
+These charts are exported from the corresponding plotting cells in [`ev_sales.ipynb`](./ev_sales.ipynb).
+
+<table>
+  <tr>
+    <td align="center"><strong>Yearly EV sales trend</strong><br><img src="./visualizations/yearly-ev-sales.png" alt="Line chart of reported yearly EV sales from 2014 through 2024" width="100%"></td>
+    <td align="center"><strong>Total EV sales by state</strong><br><img src="./visualizations/ev-sales-by-state.png" alt="Bar chart of total EV sales by Indian state and territory" width="100%"></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Total EV sales by vehicle type</strong><br><img src="./visualizations/ev-sales-by-vehicle-type.png" alt="Bar chart comparing total EV sales across vehicle types" width="100%"></td>
+    <td align="center"><strong>Total EV sales by month</strong><br><img src="./visualizations/ev-sales-by-month.png" alt="Bar chart of reported EV sales totals for each calendar month" width="100%"></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Monthly EV sales, stacked by year</strong><br><img src="./visualizations/monthly-ev-sales-stacked-by-year.png" alt="Stacked bar chart of monthly EV sales totals, with each year shown as a segment" width="100%"></td>
+    <td></td>
+  </tr>
+</table>
+
+The 2024 total is much lower than 2023 in the supplied data and may represent a partial year; the repository does not include coverage metadata to confirm this.
+
 ### Findings from the supplied data
 
 - **2-wheelers:** 1,808,105 reported sales (**50.3%** of the total).
@@ -78,6 +99,12 @@ A stronger forecasting experiment would first define a consistent state/vehicle-
 .
 ├── ev_sales.ipynb
 ├── Electric Vehicle Sales by State in India.csv
+├── visualizations/
+│   ├── yearly-ev-sales.png
+│   ├── ev-sales-by-state.png
+│   ├── ev-sales-by-vehicle-type.png
+│   ├── ev-sales-by-month.png
+│   └── monthly-ev-sales-stacked-by-year.png
 └── README.md
 ```
 
@@ -86,4 +113,4 @@ A stronger forecasting experiment would first define a consistent state/vehicle-
 - Correct leakage and align previous-year comparisons at a consistent data grain.
 - Compare against simple baselines and evaluate errors by state, segment, and time period.
 - Document the dataset's source, update cadence, and treatment of partial periods.
-- Export the notebook's most useful visualizations and add pinned dependency versions for reproducibility.
+- Refresh the exported visualizations whenever the notebook code or input data changes, and add pinned dependency versions for reproducibility.
